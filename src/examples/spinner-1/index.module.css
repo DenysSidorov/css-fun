@@ -17,6 +17,7 @@ body {
 }
 
 .spinner {
+    position: relative;
     height: 120px;
     width: 120px;
     border-radius: 100%;
@@ -24,6 +25,19 @@ body {
     /*border-top-left-radius: 1px;*/
     border-bottom-color: transparent;
     animation: animate 1.5s infinite linear;
+}
+
+.spinner::after {
+    position: absolute;
+    bottom: 11px;
+    left: 10px;
+    content: '';
+    display: block;
+    background-color: #fc8458;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px 10px rgba(252, 131, 88, 0.3);
 }
 
 @keyframes animate {
