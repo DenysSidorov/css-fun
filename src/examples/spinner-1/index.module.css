@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+}
+
+.parent {
+    background-color: dimgray;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    border: 4px solid coral;
+    /*border-top-left-radius: 1px;*/
+    border-bottom-color: transparent;
+    animation: animate 1.5s infinite linear;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
